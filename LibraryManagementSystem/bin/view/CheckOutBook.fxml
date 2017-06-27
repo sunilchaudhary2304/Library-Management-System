@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pnCheckOutForm" prefHeight="586.0" prefWidth="586.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CheckOutBookController">
+   <children>
+      <AnchorPane fx:id="pnSubCheckOutForm" layoutX="6.0" layoutY="5.0" minHeight="0.0" minWidth="0.0" prefHeight="586.0" prefWidth="670.0">
+         <children>
+            <Label fx:id="lblStudentName" alignment="TOP_CENTER" contentDisplay="RIGHT" prefHeight="26.0" prefWidth="583.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMemberId" layoutX="25.0" layoutY="25.0" prefHeight="26.0" prefWidth="74.0" text="Member ID:">
+               <font>
+                  <Font size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtMemberId" layoutX="128.0" layoutY="22.0" prefHeight="25.0" prefWidth="123.0" />
+            <Label fx:id="lblISBN" layoutX="276.0" layoutY="24.0" prefHeight="17.0" prefWidth="41.0" text="ISBN:" wrapText="true">
+               <font>
+                  <Font size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtISBN" layoutX="334.0" layoutY="21.0" />
+            <Button fx:id="btnCheckOut" layoutX="524.0" layoutY="20.0" mnemonicParsing="false" onAction="#checkOutForm" prefHeight="31.0" prefWidth="107.0" styleClass="buttonPrimry" stylesheets="@../style/application.css" text="Check out" textFill="#1b0707">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <ScrollPane fx:id="pnCheckOutRecord" layoutX="-4.0" layoutY="106.0" prefHeight="371.0" prefWidth="661.0">
+               <content>
+                  <TableView fx:id="tblCheckOutRecord" prefHeight="368.0" prefWidth="657.0">
+                     <columns>
+                        <TableColumn fx:id="thBook" editable="false" prefWidth="224.0" text="Book" />
+                        <TableColumn fx:id="thISBN" editable="false" prefWidth="133.0" text="Isbn" />
+                        <TableColumn fx:id="thCheckOutDate" editable="false" prefWidth="147.0" text="CheckOut Date" />
+                        <TableColumn fx:id="thDueDate" editable="false" prefWidth="150.0" text="Due Date" />
+                     </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="857.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddBookController">
+	<!-- TODO Add Nodes -->
+	<children>
+      <GridPane layoutX="102.0" layoutY="39.0" prefHeight="204.0" prefWidth="755.0">
+         <children>
+            <Label prefHeight="18.0" prefWidth="172.0" text="ISBN" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" fx:id="x1" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="173.0" text="Title" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtISBN" prefWidth="200.0" promptText="ISBN" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+            <TextField fx:id="txtBookTitle" prefHeight="25.0" prefWidth="157.0" promptText="Title" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+            <Label id="maximum" text="Max. Checkout Length" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtBookMaxLendDays" prefHeight="25.0" prefWidth="151.0" promptText="Max Checkout Length" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+            <Label text="No of Copies" GridPane.rowIndex="4">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtBookNoCopies" prefHeight="25.0" prefWidth="182.0" promptText="NoOfCopies" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+            <Button id="btnSubmitBook" fx:id="btnAddBook" disable="true" mnemonicParsing="false" onAction="#AddBook" prefHeight="25.0" prefWidth="120.0" styleClass="buttonPrimry" stylesheets="@../style/application.css" text="Add Book" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label prefHeight="27.0" prefWidth="266.0" text="Add Book/ Author" textAlignment="CENTER" textFill="#3377d7" GridPane.columnIndex="1" GridPane.columnSpan="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAuthorDesc" prefHeight="17.0" prefWidth="124.0" text="Author is Required" textFill="#d01b1b" GridPane.rowIndex="5">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+           
+               </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="167.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.0" minWidth="10.0" prefWidth="140.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.0" minWidth="10.0" prefWidth="157.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.0" minWidth="10.0" prefWidth="99.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.0" minWidth="10.0" prefWidth="105.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.0" minWidth="10.0" prefWidth="76.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="36.0" minHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="41.0" minHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="43.0" minHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="49.0" minHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="16.0" minHeight="3.0" prefHeight="3.0" />
+            <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+         </rowConstraints>
+      </GridPane>
+      <GridPane fx:id="gpAuthor" layoutX="101.0" layoutY="285.0" prefHeight="204.0" prefWidth="624.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="181.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="164.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="468.0" minWidth="10.0" prefWidth="144.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="468.0" minWidth="10.0" prefWidth="90.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Credentail" GridPane.rowIndex="4">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtBookAuthorFirstName" prefHeight="45.0" prefWidth="241.0" promptText="FirstName" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="7.0" right="8.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtBookAuthorLastName" prefHeight="25.0" prefWidth="173.0" promptText="LastName" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="7.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Name " GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtBookAuthorStreet" prefHeight="44.0" prefWidth="197.0" promptText="Street" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="7.0" right="8.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtBookAuthorState" prefHeight="44.0" prefWidth="179.0" promptText="State" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="7.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtBookAuthorCity" prefHeight="45.0" prefWidth="172.0" promptText="City" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="7.0" left="8.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtBookAuthorZip" prefHeight="45.0" prefWidth="178.0" promptText="Zip" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="7.0" left="8.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Address" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField id="txtBookAuthorZip" fx:id="txtBookAuthorPhoneNo" prefHeight="25.0" prefWidth="181.0" promptText="Phone No" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="7.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Phone No." GridPane.rowIndex="3">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtBookAuthorCredentials" prefHeight="48.0" prefWidth="0.0" promptText="Credentials" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="7.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField id="txtBookAuthorZip" fx:id="txtBookAuthorShortBio" prefHeight="46.0" prefWidth="283.0" promptText="Short Bio" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="7.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Short Bio." GridPane.rowIndex="5">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnAddAuthor" mnemonicParsing="false" onAction="#AddAuthor" text="Add Author" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="Author Details" textFill="#3377d7" GridPane.columnIndex="2">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <Label fx:id="lblMessageAuthor" layoutX="101.0" layoutY="246.0" prefHeight="20.0" prefWidth="624.0" textFill="#97170c">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="lblMessagebook" layoutX="101.0" layoutY="8.0" prefHeight="25.0" prefWidth="589.0" textFill="#c60505">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+	</children>
+</AnchorPane>

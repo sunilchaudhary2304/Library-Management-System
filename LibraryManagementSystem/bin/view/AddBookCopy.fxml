@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="493.0" prefWidth="857.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddBookCopyController">
+	<!-- TODO Add Nodes -->
+	<children>
+      <GridPane fx:id="gridPane" layoutX="64.0" layoutY="136.0" prefHeight="204.0" prefWidth="755.0">
+         <children>
+            <Label prefHeight="18.0" prefWidth="172.0" text="ISBN" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" fx:id="x1" />
+               </font>
+            </Label>
+            <TextField fx:id="txtISBN" prefWidth="200.0" promptText="ISBN" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+            <Label text="No of Copies" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtBookNoCopies" prefHeight="25.0" prefWidth="182.0" promptText="NoOfCopies" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+            <Button id="btnSubmitBook" fx:id="btnAddBookCopy" alignment="CENTER" mnemonicParsing="false" onAction="#AddBookCopy" prefHeight="25.0" prefWidth="120.0" styleClass="buttonPrimry" stylesheets="@../style/application.css" text="Add Book Copy" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label prefHeight="27.0" prefWidth="266.0" text="Add Book Copy" textAlignment="CENTER" textFill="#3377d7" GridPane.columnIndex="1" GridPane.columnSpan="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+           
+               </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="167.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.0" minWidth="10.0" prefWidth="140.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.0" minWidth="10.0" prefWidth="157.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.0" minWidth="10.0" prefWidth="99.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.0" minWidth="10.0" prefWidth="105.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.0" minWidth="10.0" prefWidth="76.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="36.0" minHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="49.0" minHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="16.0" minHeight="3.0" prefHeight="3.0" />
+            <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+         </rowConstraints>
+      </GridPane>
+      <Label fx:id="lblMessage" layoutX="232.0" layoutY="96.0" prefHeight="33.0" prefWidth="289.0" textFill="#3377d7" />
+	</children>
+</AnchorPane>
